@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Generate rust-project.json",
+        "command": "bazel",
+        "args": [
+          "run",
+          "@rules_rust//tools/rust_analyzer:gen_rust_project"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build",
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "never",
+          "panel": "dedicated"
+        },
+        "runOptions": {
+          "runOn": "folderOpen"
+        }
+      },
+      {
+        "label": "Build Axum app (Debug)",
+        "type": "shell",
+        "command": "bazel build //axum_app -c dbg",
+        "windows": {
+          "command": "bazel build //axum_app --experimental_enable_runfiles -c dbg"
+        },
+        "osx": {
+          "command": "bazel build //axum_app -c dbg --spawn_strategy=standalone"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+}
