@@ -32,7 +32,7 @@ crates_repository(
     lockfile = "//:Cargo.Bazel.lock",
     packages = {
         "tokio": crate.spec(
-            version = "1.27.0",
+            version = "1.28.1",
             features = ["full"]
         ),
         "hyper": crate.spec(
@@ -43,7 +43,7 @@ crates_repository(
             version = "0.4.13",
         ),
         "axum": crate.spec(
-            version = "0.6.16",
+            version = "0.6.18",
         )
     },
     # Setting the default package name to `""` forces the use of the macros defined in this repository

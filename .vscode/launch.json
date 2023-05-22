@@ -4,5 +4,35 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            // Build with:
+            // --compilation_mode dbg
+            // to enable debugging with lldb
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug axum_app",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bazel-bin/axum_app/axum_app_dbg",
+            "args": [],
+            "sourceMap": {
+                "proc/self/cwd": "${workspaceFolder}",
+                ".": "${workspaceFolder}"
+            }
+        },
+        {
+            // Build with:
+            // --compilation_mode dbg
+            // to enable debugging with lldb
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug hello_world",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bazel-bin/hello_world/hello_world",
+            "args": [],
+            "sourceMap": {
+                "proc/self/cwd": "${workspaceFolder}",
+                ".": "${workspaceFolder}"
+            }
+        }
     ]
 }
