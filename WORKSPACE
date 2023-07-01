@@ -1,5 +1,18 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+http_archive(
+    name = "bazel_skylib",
+    sha256 = "66ffd9315665bfaafc96b52278f57c7e2dd09f5ede279ea6d39b2be471e7e3aa",
+    urls = [
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.4.2/bazel-skylib-1.4.2.tar.gz",
+        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.4.2/bazel-skylib-1.4.2.tar.gz",
+    ],
+)
+
+load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+
+bazel_skylib_workspace()
+
 # To find additional information on this release or newer ones visit:
 # https://github.com/bazelbuild/rules_rust/releases
 http_archive(
@@ -15,8 +28,7 @@ rules_rust_dependencies()
 rust_register_toolchains(
     edition = "2021",
     versions = [
-        "beta/20230419",
-        "1.69.0"
+        "1.70.0"
     ],
 )
 
@@ -32,11 +44,11 @@ crates_repository(
     lockfile = "//:Cargo.Bazel.lock",
     packages = {
         "tokio": crate.spec(
-            version = "1.28.1",
+            version = "1.29.0",
             features = ["full"]
         ),
         "hyper": crate.spec(
-            version = "0.14.26",
+            version = "0.14.27",
             features = ["full"]
         ),
         "tower": crate.spec(
