@@ -1,5 +1,5 @@
 {
-  "checksum": "60ec52f372ee922ae74a7a393f2994da3bb560863d00b69b900042183c4f6775",
+  "checksum": "41b8951feedca45ad7d1af345f9b8adaa5b62b946d1afa2e310337ab9f159bc0",
   "crates": {
     "addr2line 0.19.0": {
       "name": "addr2line",
@@ -5329,13 +5329,16 @@
       "riscv32imc-unknown-none-elf",
       "riscv64gc-unknown-none-elf",
       "s390x-unknown-linux-gnu",
+      "thumbv7em-none-eabi",
+      "thumbv8m.main-none-eabi",
       "x86_64-apple-darwin",
       "x86_64-apple-ios",
       "x86_64-fuchsia",
       "x86_64-linux-android",
       "x86_64-pc-windows-msvc",
       "x86_64-unknown-freebsd",
-      "x86_64-unknown-linux-gnu"
+      "x86_64-unknown-linux-gnu",
+      "x86_64-unknown-none"
     ],
     "cfg(not(windows))": [
       "aarch64-apple-darwin",
@@ -5355,6 +5358,8 @@
       "riscv32imc-unknown-none-elf",
       "riscv64gc-unknown-none-elf",
       "s390x-unknown-linux-gnu",
+      "thumbv7em-none-eabi",
+      "thumbv8m.main-none-eabi",
       "wasm32-unknown-unknown",
       "wasm32-wasi",
       "x86_64-apple-darwin",
@@ -5362,7 +5367,8 @@
       "x86_64-fuchsia",
       "x86_64-linux-android",
       "x86_64-unknown-freebsd",
-      "x86_64-unknown-linux-gnu"
+      "x86_64-unknown-linux-gnu",
+      "x86_64-unknown-none"
     ],
     "cfg(not(windows_raw_dylib))": [
       "aarch64-apple-darwin",
@@ -5384,6 +5390,8 @@
       "riscv32imc-unknown-none-elf",
       "riscv64gc-unknown-none-elf",
       "s390x-unknown-linux-gnu",
+      "thumbv7em-none-eabi",
+      "thumbv8m.main-none-eabi",
       "wasm32-unknown-unknown",
       "wasm32-wasi",
       "x86_64-apple-darwin",
@@ -5392,7 +5400,8 @@
       "x86_64-linux-android",
       "x86_64-pc-windows-msvc",
       "x86_64-unknown-freebsd",
-      "x86_64-unknown-linux-gnu"
+      "x86_64-unknown-linux-gnu",
+      "x86_64-unknown-none"
     ],
     "cfg(target_os = \"redox\")": [],
     "cfg(target_os = \"wasi\")": [
