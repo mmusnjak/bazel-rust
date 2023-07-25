@@ -1,5 +1,5 @@
 {
-  "checksum": "41b8951feedca45ad7d1af345f9b8adaa5b62b946d1afa2e310337ab9f159bc0",
+  "checksum": "38e736585a8760983eb914d604a611637f963d0bf92c1712d4dc825a90c70aee",
   "crates": {
     "addr2line 0.19.0": {
       "name": "addr2line",
@@ -165,13 +165,13 @@
       },
       "license": "Apache-2.0 OR MIT"
     },
-    "axum 0.6.18": {
+    "axum 0.6.19": {
       "name": "axum",
-      "version": "0.6.18",
+      "version": "0.6.19",
       "repository": {
         "Http": {
-          "url": "https://crates.io/api/v1/crates/axum/0.6.18/download",
-          "sha256": "f8175979259124331c1d7bf6586ee7e0da434155e4b2d48ec2c8386281d8df39"
+          "url": "https://crates.io/api/v1/crates/axum/0.6.19/download",
+          "sha256": "a6a1de45611fdb535bfde7b7de4fd54f4fd2b17b1737c0a59b69bf9b92074b8c"
         }
       },
       "targets": [
@@ -216,7 +216,7 @@
         "deps": {
           "common": [
             {
-              "id": "axum 0.6.18",
+              "id": "axum 0.6.19",
               "target": "build_script_build"
             },
             {
@@ -292,7 +292,7 @@
               "target": "sync_wrapper"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
@@ -320,7 +320,7 @@
           ],
           "selects": {}
         },
-        "version": "0.6.18"
+        "version": "0.6.19"
       },
       "build_script_attrs": {
         "data_glob": [
@@ -679,7 +679,7 @@
         "deps": {
           "common": [
             {
-              "id": "axum 0.6.18",
+              "id": "axum 0.6.19",
               "target": "axum"
             },
             {
@@ -687,7 +687,7 @@
               "target": "hyper"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
@@ -1166,7 +1166,7 @@
               "target": "slab"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
@@ -1536,7 +1536,7 @@
               "target": "socket2"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
@@ -3410,13 +3410,13 @@
       },
       "license": "Apache-2.0"
     },
-    "tokio 1.29.0": {
+    "tokio 1.29.1": {
       "name": "tokio",
-      "version": "1.29.0",
+      "version": "1.29.1",
       "repository": {
         "Http": {
-          "url": "https://crates.io/api/v1/crates/tokio/1.29.0/download",
-          "sha256": "374442f06ee49c3a28a8fc9f01a2596fed7559c6b99b31279c3261778e77d84f"
+          "url": "https://crates.io/api/v1/crates/tokio/1.29.1/download",
+          "sha256": "532826ff75199d5833b9d2c5fe410f29235e25704ee5f0ef599fb51c21f4a4da"
         }
       },
       "targets": [
@@ -3494,7 +3494,7 @@
               "target": "pin_project_lite"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "build_script_build"
             }
           ],
@@ -3539,7 +3539,7 @@
           ],
           "selects": {}
         },
-        "version": "1.29.0"
+        "version": "1.29.1"
       },
       "build_script_attrs": {
         "data_glob": [
@@ -3656,7 +3656,7 @@
               "target": "pin_project_lite"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
@@ -3731,7 +3731,7 @@
               "target": "pin_project_lite"
             },
             {
-              "id": "tokio 1.29.0",
+              "id": "tokio 1.29.1",
               "target": "tokio"
             },
             {
