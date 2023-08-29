@@ -10,8 +10,10 @@ fn main() {
     let timestamp = (SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .unwrap()
-        .as_millis() & 0xffffffffffff) << 80;
+        .as_millis()
+        & 0xffffffffffff)
+        << 80;
     println!("{:b}", &timestamp);
     println!("{:#X}", &timestamp);
-    let _a=0;
+    let _a = 0;
 }

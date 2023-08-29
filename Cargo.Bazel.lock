@@ -1,5 +1,5 @@
 {
-  "checksum": "38e736585a8760983eb914d604a611637f963d0bf92c1712d4dc825a90c70aee",
+  "checksum": "1a74db2cc6ab35a6e089a9f71aa2a64c7875176083e13cd9bf00e8945723d4ab",
   "crates": {
     "addr2line 0.19.0": {
       "name": "addr2line",
@@ -165,13 +165,13 @@
       },
       "license": "Apache-2.0 OR MIT"
     },
-    "axum 0.6.19": {
+    "axum 0.6.20": {
       "name": "axum",
-      "version": "0.6.19",
+      "version": "0.6.20",
       "repository": {
         "Http": {
-          "url": "https://crates.io/api/v1/crates/axum/0.6.19/download",
-          "sha256": "a6a1de45611fdb535bfde7b7de4fd54f4fd2b17b1737c0a59b69bf9b92074b8c"
+          "url": "https://crates.io/api/v1/crates/axum/0.6.20/download",
+          "sha256": "3b829e4e32b91e643de6eafe82b1d90675f5874230191a4ffbc1b336dec4d6bf"
         }
       },
       "targets": [
@@ -216,7 +216,7 @@
         "deps": {
           "common": [
             {
-              "id": "axum 0.6.19",
+              "id": "axum 0.6.20",
               "target": "build_script_build"
             },
             {
@@ -268,7 +268,7 @@
               "target": "percent_encoding"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
@@ -292,7 +292,7 @@
               "target": "sync_wrapper"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -320,7 +320,7 @@
           ],
           "selects": {}
         },
-        "version": "0.6.19"
+        "version": "0.6.20"
       },
       "build_script_attrs": {
         "data_glob": [
@@ -679,7 +679,7 @@
         "deps": {
           "common": [
             {
-              "id": "axum 0.6.19",
+              "id": "axum 0.6.20",
               "target": "axum"
             },
             {
@@ -687,7 +687,7 @@
               "target": "hyper"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -1056,7 +1056,7 @@
               "target": "build_script_build"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
@@ -1166,7 +1166,7 @@
               "target": "slab"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -1343,7 +1343,7 @@
               "target": "http"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             }
           ],
@@ -1528,7 +1528,7 @@
               "target": "itoa"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
@@ -1536,7 +1536,7 @@
               "target": "socket2"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -2456,13 +2456,13 @@
       },
       "license": "Apache-2.0 OR MIT"
     },
-    "pin-project-lite 0.2.9": {
+    "pin-project-lite 0.2.13": {
       "name": "pin-project-lite",
-      "version": "0.2.9",
+      "version": "0.2.13",
       "repository": {
         "Http": {
-          "url": "https://crates.io/api/v1/crates/pin-project-lite/0.2.9/download",
-          "sha256": "e0a7ae3ac2f1173085d398531c705756c94a4c56843785df85a60c1a0afac116"
+          "url": "https://crates.io/api/v1/crates/pin-project-lite/0.2.13/download",
+          "sha256": "8afb450f006bf6385ca15ef45d71d2288452bc3683ce2e2cacc0d18e4be60b58"
         }
       },
       "targets": [
@@ -2482,7 +2482,7 @@
           "**"
         ],
         "edition": "2018",
-        "version": "0.2.9"
+        "version": "0.2.13"
       },
       "license": "Apache-2.0 OR MIT"
     },
@@ -3240,6 +3240,59 @@
       },
       "license": "MIT OR Apache-2.0"
     },
+    "socket2 0.5.3": {
+      "name": "socket2",
+      "version": "0.5.3",
+      "repository": {
+        "Http": {
+          "url": "https://crates.io/api/v1/crates/socket2/0.5.3/download",
+          "sha256": "2538b18701741680e0322a2302176d3253a35388e2e62f172f64f4f16605f877"
+        }
+      },
+      "targets": [
+        {
+          "Library": {
+            "crate_name": "socket2",
+            "crate_root": "src/lib.rs",
+            "srcs": [
+              "**/*.rs"
+            ]
+          }
+        }
+      ],
+      "library_target_name": "socket2",
+      "common_attrs": {
+        "compile_data_glob": [
+          "**"
+        ],
+        "crate_features": {
+          "common": [
+            "all"
+          ],
+          "selects": {}
+        },
+        "deps": {
+          "common": [],
+          "selects": {
+            "cfg(unix)": [
+              {
+                "id": "libc 0.2.147",
+                "target": "libc"
+              }
+            ],
+            "cfg(windows)": [
+              {
+                "id": "windows-sys 0.48.0",
+                "target": "windows_sys"
+              }
+            ]
+          }
+        },
+        "edition": "2021",
+        "version": "0.5.3"
+      },
+      "license": "MIT OR Apache-2.0"
+    },
     "syn 1.0.107": {
       "name": "syn",
       "version": "1.0.107",
@@ -3410,13 +3463,13 @@
       },
       "license": "Apache-2.0"
     },
-    "tokio 1.29.1": {
+    "tokio 1.32.0": {
       "name": "tokio",
-      "version": "1.29.1",
+      "version": "1.32.0",
       "repository": {
         "Http": {
-          "url": "https://crates.io/api/v1/crates/tokio/1.29.1/download",
-          "sha256": "532826ff75199d5833b9d2c5fe410f29235e25704ee5f0ef599fb51c21f4a4da"
+          "url": "https://crates.io/api/v1/crates/tokio/1.32.0/download",
+          "sha256": "17ed6077ed6cd6c74735e21f37eb16dc3935f96878b1fe961074089cc80893f9"
         }
       },
       "targets": [
@@ -3424,15 +3477,6 @@
           "Library": {
             "crate_name": "tokio",
             "crate_root": "src/lib.rs",
-            "srcs": [
-              "**/*.rs"
-            ]
-          }
-        },
-        {
-          "BuildScript": {
-            "crate_name": "build_script_build",
-            "crate_root": "build.rs",
             "srcs": [
               "**/*.rs"
             ]
@@ -3490,18 +3534,14 @@
               "target": "parking_lot"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
-            },
-            {
-              "id": "tokio 1.29.1",
-              "target": "build_script_build"
             }
           ],
           "selects": {
-            "cfg(not(any(target_arch = \"wasm32\", target_arch = \"wasm64\")))": [
+            "cfg(not(target_family = \"wasm\"))": [
               {
-                "id": "socket2 0.4.9",
+                "id": "socket2 0.5.3",
                 "target": "socket2"
               }
             ],
@@ -3539,21 +3579,7 @@
           ],
           "selects": {}
         },
-        "version": "1.29.1"
-      },
-      "build_script_attrs": {
-        "data_glob": [
-          "**"
-        ],
-        "deps": {
-          "common": [
-            {
-              "id": "autocfg 1.1.0",
-              "target": "autocfg"
-            }
-          ],
-          "selects": {}
-        }
+        "version": "1.32.0"
       },
       "license": "MIT"
     },
@@ -3652,11 +3678,11 @@
               "target": "futures_sink"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -3727,11 +3753,11 @@
               "target": "pin_project"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
-              "id": "tokio 1.29.1",
+              "id": "tokio 1.32.0",
               "target": "tokio"
             },
             {
@@ -3857,7 +3883,7 @@
               "target": "log"
             },
             {
-              "id": "pin-project-lite 0.2.9",
+              "id": "pin-project-lite 0.2.13",
               "target": "pin_project_lite"
             },
             {
@@ -4327,11 +4353,14 @@
           "common": [
             "Win32",
             "Win32_Foundation",
+            "Win32_Networking",
+            "Win32_Networking_WinSock",
             "Win32_Security",
             "Win32_Storage",
             "Win32_Storage_FileSystem",
             "Win32_System",
             "Win32_System_Console",
+            "Win32_System_IO",
             "Win32_System_Pipes",
             "Win32_System_SystemServices",
             "Win32_System_Threading",
@@ -5309,7 +5338,7 @@
     "cfg(all(target_arch = \"x86_64\", target_env = \"msvc\", not(windows_raw_dylib)))": [
       "x86_64-pc-windows-msvc"
     ],
-    "cfg(not(any(target_arch = \"wasm32\", target_arch = \"wasm64\")))": [
+    "cfg(not(target_family = \"wasm\"))": [
       "aarch64-apple-darwin",
       "aarch64-apple-ios",
       "aarch64-apple-ios-sim",
