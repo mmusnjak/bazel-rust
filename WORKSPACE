@@ -4,8 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # https://github.com/bazelbuild/rules_rust/releases
 http_archive(
     name = "rules_rust",
-    sha256 = "9d04e658878d23f4b00163a72da3db03ddb451273eb347df7d7c50838d698f49",
-    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.26.0/rules_rust-v0.26.0.tar.gz"],
+    sha256 = "6357de5982dd32526e02278221bb8d6aa45717ba9bbacf43686b130aa2c72e1e",
+    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.30.0/rules_rust-v0.30.0.tar.gz"],
 )
 
 load("@rules_rust//rust:repositories.bzl", "rules_rust_dependencies", "rust_register_toolchains")
@@ -15,7 +15,7 @@ rules_rust_dependencies()
 rust_register_toolchains(
     edition = "2021",
     versions = [
-        "1.72.0"
+        "1.73.0"
     ],
 )
 
@@ -31,7 +31,7 @@ crates_repository(
     lockfile = "//:Cargo.Bazel.lock",
     packages = {
         "tokio": crate.spec(
-            version = "1.32.0",
+            version = "1.33.0",
             features = ["full"]
         ),
         "hyper": crate.spec(
