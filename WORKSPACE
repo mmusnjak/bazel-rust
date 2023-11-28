@@ -15,7 +15,7 @@ rules_rust_dependencies()
 rust_register_toolchains(
     edition = "2021",
     versions = [
-        "1.73.0"
+        "1.74.0"
     ],
 )
 
@@ -31,18 +31,18 @@ crates_repository(
     lockfile = "//:Cargo.Bazel.lock",
     packages = {
         "tokio": crate.spec(
-            version = "1.33.0",
+            version = "1.34.0",
             features = ["full"]
         ),
         "hyper": crate.spec(
-            version = "0.14.27",
+            version = "1.0.0",
             features = ["full"]
         ),
         "tower": crate.spec(
             version = "0.4.13",
         ),
         "axum": crate.spec(
-            version = "0.6.20",
+            version = "0.7.1",
         )
     },
     # Setting the default package name to `""` forces the use of the macros defined in this repository
