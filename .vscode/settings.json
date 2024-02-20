@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "Bazel"
-    ]
+    ],
+    "bazel.queriesShareServer": true,
+    "bazel.executable": "bazelisk"
 }

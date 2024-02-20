@@ -8,7 +8,7 @@ rust_library(
 )
 
 rust_test_suite(
-    name = "tests",
+    name = "all",
     srcs = glob(["tests/**"]),
     deps = [":hello_lib"],
 )

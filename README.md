@@ -23,3 +23,13 @@
 * Figure out how to run and debug from inside VSCode
 
 * Figure out how to build for linux-amd64 from MacOS M1
+
+## VSCode setup
+
+A [Github issue](https://github.com/bazelbuild/bazel/issues/10653#issuecomment-694230015) describes a problem with finding build targets in vscode.
+There are two ways to fix it:
+
+1. Force sharing of bazel server ([comment](https://github.com/bazelbuild/bazel/issues/10653#issuecomment-1131481319))
+2. Add a line to `.bazelignore`, according to [another comment](https://github.com/bazelbuild/bazel/issues/10653#issuecomment-694230015) on the same issue.
+
+Both worked for me, choosing to stick with vscode option!
