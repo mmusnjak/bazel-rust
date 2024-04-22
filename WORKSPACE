@@ -4,8 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # https://github.com/bazelbuild/rules_rust/releases
 http_archive(
     name = "rules_rust",
-    integrity = "sha256-GuRaQT0LlDOYcyDfKtQQ22oV+vtsiM8P0b87qsvoJts=",
-    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.39.0/rules_rust-v0.39.0.tar.gz"],
+    integrity = "sha256-JLN47ZcAbx9wEr5Jiib4HduZATGLiDgK7oUi/fvotzU=",
+    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.42.1/rules_rust-v0.42.1.tar.gz"],
 )
 
 load("@rules_rust//rust:repositories.bzl", "rules_rust_dependencies", "rust_register_toolchains")
@@ -15,7 +15,7 @@ rules_rust_dependencies()
 rust_register_toolchains(
     edition = "2021",
     versions = [
-        "1.76.0"
+        "1.77.2"
     ],
 )
 
@@ -31,18 +31,11 @@ crates_repository(
     lockfile = "//:Cargo.Bazel.lock",
     packages = {
         "tokio": crate.spec(
-            version = "1.36.0",
+            version = "1.37.0",
             features = ["full"]
-        ),
-        "hyper": crate.spec(
-            version = "1.1.0",
-            features = ["full"]
-        ),
-        "tower": crate.spec(
-            version = "0.4.13",
         ),
         "axum": crate.spec(
-            version = "0.7.4",
+            version = "0.7.5",
         )
     },
     # Setting the default package name to `""` forces the use of the macros defined in this repository

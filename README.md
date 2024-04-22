@@ -20,7 +20,7 @@
 
 * Figure out how to build multiple profiles. Is the macro used in axum_app how it is supposed to be?
 
-* Figure out how to run and debug from inside VSCode
+* Figure out how to run and debug from inside VSCode. Some info is available in [a Github issue](https://github.com/bazelbuild/rules_rust/issues/370)
 
 * Figure out how to build for linux-amd64 from MacOS M1
 
