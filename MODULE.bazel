@@ -1,6 +1,50 @@
+"""Bazel module definition for the bazel-rust example repository."""
+
+module(
+    name = "bazel_rust",
+    version = "0.0.0",
+)
+
 ###############################################################################
-# Bazel now uses Bzlmod by default to manage external dependencies.
-# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+# Rules
+###############################################################################
+
+bazel_dep(name = "rules_rust", version = "0.75.0")
+
+###############################################################################
+# Rust toolchain
 #
-# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+# `rules_rust` registers `@rust_toolchains//:all` from its own module file.
+# The tags below replace the default toolchain set of that module.
 ###############################################################################
+
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+    edition = "2024",
+    versions = ["1.99.1"],
+)
+use_repo(rust, "rust_toolchains")
+
+###############################################################################
+# Crate dependencies
+#
+# This repository has no Cargo workspace. It declares each direct dependency
+# here, and `crate.from_specs` resolves the dependency tree.
+###############################################################################
+
+crate = use_extension("@rules_rust//crate_universe:extensions.bzl", "crate")
+crate.spec(
+    features = ["full"],
+    package = "tokio",
+    version = "1.54.1",
+)
+crate.spec(
+    package = "axum",
+    version = "0.8.9",
+)
+crate.from_specs(
+    name = "crate_index",
+    cargo_lockfile = "//:Cargo.lock",
+    lockfile = "//:Cargo.Bazel.lock",
+)
+use_repo(crate, "crate_index")

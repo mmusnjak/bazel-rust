@@ -22,19 +22,26 @@
         }
       },
       {
-        "label": "Build Axum app (Debug)",
+        "label": "Build axum_app (dbg)",
         "type": "shell",
         "command": "bazelisk build //axum_app -c dbg",
         "windows": {
-          "command": "bazelisk build //axum_app --experimental_enable_runfiles -c dbg"
-        },
-        "osx": {
-          "command": "bazelisk build //axum_app -c dbg --spawn_strategy=standalone"
+          "command": "bazelisk build //axum_app -c dbg --experimental_enable_runfiles"
         },
         "group": {
           "kind": "build",
           "isDefault": true
         },
+        "problemMatcher": []
+      },
+      {
+        "label": "Build hello_world (dbg)",
+        "type": "shell",
+        "command": "bazelisk build //hello_world -c dbg",
+        "windows": {
+          "command": "bazelisk build //hello_world -c dbg --experimental_enable_runfiles"
+        },
+        "group": "build",
         "problemMatcher": []
       }
     ]

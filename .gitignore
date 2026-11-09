@@ -88,3 +88,6 @@ target/
 # End of https://www.toptal.com/developers/gitignore/api/rust,macos,bazel,visualstudiocode
 
 **/rust-project.json
+
+# Cache written by the rules_rust gen_rust_project tool
+/.rules_rust_analyzer/

@@ -4,8 +4,8 @@ rust_binary(
     name = "axum_app",
     srcs = ["main.rs"],
     deps = [
-        "@crate_index//:tokio",
-        "@crate_index//:axum",
+        "@crate_index//tokio",
+        "@crate_index//axum",
         "//hello_lib:hello_lib"
     ],
 )
