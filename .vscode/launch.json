@@ -1,36 +1,44 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // Debug configurations for the CodeLLDB extension (vadimcn.vscode-lldb).
+    //
+    // Each configuration first runs a task that builds with `-c dbg`. That step
+    // is necessary. The `bazel-bin` symlink points to the output of the last
+    // build, so a build in another compilation mode moves the symlink away from
+    // the debug binary.
+    //
+    // `cwd` and `sourceMap` both exist on purpose. rules_rust compiles with a
+    // DWARF `DW_AT_comp_dir` value of ".", so each source path is relative to
+    // the workspace root. The `cwd` value lets LLDB resolve those paths. The
+    // `sourceMap` entry does the same if the debugger starts elsewhere.
     "version": "0.2.0",
     "configurations": [
         {
-            // Build with:
-            // --compilation_mode dbg
-            // to enable debugging with lldb
             "type": "lldb",
             "request": "launch",
             "name": "Debug axum_app",
-            "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bazel-bin/axum_app/axum_app_dbg",
+            "preLaunchTask": "Build axum_app (dbg)",
+            "program": "${workspaceFolder}/bazel-bin/axum_app/axum_app",
             "args": [],
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": [
+                "rust"
+            ],
             "sourceMap": {
-                "proc/self/cwd": "${workspaceFolder}",
                 ".": "${workspaceFolder}"
             }
         },
         {
-            // Build with:
-            // --compilation_mode dbg
-            // to enable debugging with lldb
             "type": "lldb",
             "request": "launch",
             "name": "Debug hello_world",
-            "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bazel-bin/hello_world/hello_world",
+            "preLaunchTask": "Build hello_world (dbg)",
+            "program": "${workspaceFolder}/bazel-bin/hello_world/hello_world",
             "args": [],
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": [
+                "rust"
+            ],
             "sourceMap": {
-                "proc/self/cwd": "${workspaceFolder}",
                 ".": "${workspaceFolder}"
             }
         }

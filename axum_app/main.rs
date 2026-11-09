@@ -1,6 +1,6 @@
 extern crate hello_lib;
 
-use axum::{response::Html, routing::get, Router};
+use axum::{Router, response::Html, routing::get};
 use std::net::SocketAddr;
 
 #[tokio::main]
