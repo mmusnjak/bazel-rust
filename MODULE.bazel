@@ -42,6 +42,28 @@ crate.spec(
     package = "axum",
     version = "0.8.9",
 )
+crate.spec(
+    features = ["v7"],
+    package = "uuid",
+    version = "1.11.0",
+)
+crate.spec(
+    package = "hmac",
+    version = "0.12.1",
+)
+crate.spec(
+    package = "sha2",
+    version = "0.10.8",
+)
+crate.spec(
+    package = "base32",
+    version = "0.5.1",
+)
+crate.spec(
+    features = ["derive"],
+    package = "clap",
+    version = "4.5.51",
+)
 crate.from_specs(
     name = "crate_index",
     cargo_lockfile = "//:Cargo.lock",

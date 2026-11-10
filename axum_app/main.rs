@@ -15,8 +15,9 @@ async fn main() {
     axum::serve(listener, app).await.unwrap();
 }
 
-async fn handler() -> Html<&'static str> {
-    let _greeter = hello_lib::Greeter::new("Hello");
-    Html("<h1>Hello World</h1>")
+async fn handler() -> Html<String> {
+    let greeter = hello_lib::Greeter::new("Hello");
+    let id = greeter.greeting_id_encoded();
+    Html(format!("<h1>{}</h1><p>{}</p>", greeter.greeting("World"), id))
     // https://shanee.io/blog/2019/05/28/bazel-with-visual-studio-code/
 }

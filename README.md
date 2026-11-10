@@ -59,7 +59,7 @@ below are verified on MacOS with an aarch64 CPU.
 
 ### Build with debug information
 
-```
+```sh
 bazel build //axum_app -c dbg
 ```
 
@@ -82,7 +82,7 @@ Install the CodeLLDB extension (`vadimcn.vscode-lldb`). Press F5, then select
 
 ### Debug on the command line
 
-```
+```sh
 lldb -o "settings set target.source-map . $(pwd)" bazel-bin/axum_app/axum_app
 ```
 

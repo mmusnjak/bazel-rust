@@ -2,6 +2,7 @@
     "cSpell.words": [
         "Bazel"
     ],
-    "bazel.queriesShareServer": true,
-    "bazel.executable": "bazelisk"
+    "bazel.commandLine.queriesShareServer": true,
+    "bazel.executable": "bazelisk",
+    "rust-analyzer.linkedProjects": ["rust-project.json"]
 }

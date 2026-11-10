@@ -1,19 +1,20 @@
 extern crate hello_lib;
 
-use std::time::SystemTime;
-use std::time::UNIX_EPOCH;
+use clap::Parser;
+
+#[derive(Parser)]
+struct Args {
+    /// The greeting to use.
+    #[arg(short = 'g', long, default_value = "Hello")]
+    greeting: String,
+
+    /// The thing to greet.
+    #[arg(short = 't', long, default_value = "world")]
+    thing: String,
+}
 
 fn main() {
-    let hello = hello_lib::Greeter::new("Hello");
-    hello.greet("world");
-    let _zeros = 0_i128;
-    let timestamp = (SystemTime::now()
-        .duration_since(UNIX_EPOCH)
-        .unwrap()
-        .as_millis()
-        & 0xffffffffffff)
-        << 80;
-    println!("{:b}", &timestamp);
-    println!("{:#X}", &timestamp);
-    let _a = 0;
+    let args = Args::parse();
+    let greeter = hello_lib::Greeter::new(&args.greeting);
+    greeter.greet(&args.thing);
 }
